@@ -403,6 +403,8 @@ func (p *parser) setValue(val interface{}) {
 				v.item.pos = it.pos
 				v.item.line = it.line
 				ctx[key] = v
+			default:
+				ctx[key] = v
 			}
 		} else {
 			// FIXME(dlc), make sure to error if redefining same key?
